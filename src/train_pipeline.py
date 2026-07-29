@@ -5,6 +5,9 @@ from src.train_models import (
     MODELS,
     train_models,
 )
+from src.tune_model import (
+    tune_gradient_boosting,
+)
 
 from src.evaluate import evaluate_models
 
@@ -38,7 +41,7 @@ best_model_name = results.sort_values(
 ).iloc[0]["Model"]
 
 best_model = trained_models[best_model_name]
-
+print(f"Best model: {best_model_name}")
 save_model(
     best_model,
     "best_model.joblib",
@@ -49,4 +52,12 @@ feature_names = preprocessor.get_feature_names_out()
 plot_feature_importance(
     best_model,
     feature_names
+)
+
+
+best_model = tune_gradient_boosting(
+    X_train_processed,
+    y_train,
+    X_test_processed,
+    y_test,
 )
