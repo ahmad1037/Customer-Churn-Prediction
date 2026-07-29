@@ -19,11 +19,11 @@ def tune_gradient_boosting(
     """
 
     param_grid = {
-        "n_estimators": [100, 200, 300],
-        "learning_rate": [0.01, 0.05, 0.1],
-        "max_depth": [2, 3, 4],
-        "min_samples_split": [2, 5, 10],
-        "subsample": [0.8, 1.0],
+        "n_estimators": [300],
+        "learning_rate": [0.05],
+        "max_depth": [4],
+        "min_samples_split": [10],
+        "subsample": [0.8],
     }
 
     grid_search = GridSearchCV(
