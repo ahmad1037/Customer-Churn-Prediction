@@ -180,7 +180,7 @@ shap.summary_plot(
 plt.tight_layout()
 
 plt.savefig(
-    "reports/shap_summary.png",
+    "images/shap_summary.png",
     dpi=300,
     bbox_inches="tight",
 )
@@ -213,7 +213,7 @@ shap.plots.waterfall(
 plt.tight_layout()
 
 plt.savefig(
-    "reports/shap_waterfall.png",
+    "images/shap_waterfall.png",
     dpi=300,
     bbox_inches="tight",
 )
