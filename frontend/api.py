@@ -1,15 +1,14 @@
+import os
 import requests
 
-API_URL = "http://127.0.0.1:8000/predict"
+API_URL = os.getenv("API_URL", "http://api:8000")
+
 
 def predict(customer):
-
     response = requests.post(
-        API_URL,
+        f"{API_URL}/predict",
         json=customer,
-        timeout=10
+        timeout=30,
     )
-
     response.raise_for_status()
-
     return response.json()
