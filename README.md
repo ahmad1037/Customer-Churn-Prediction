@@ -43,47 +43,27 @@ IBM Telco Customer Churn Dataset (Enhanced)
 
 Binary Classification
 
-## Model Performance
+## Model Performance Comparison
 
-                 Model  Accuracy  Precision    Recall        F1   ROC-AUC
-0  Logistic Regression  0.801325   0.656388  0.530249  0.586614  0.842022
-1        Decision Tree  0.772942   0.583673  0.508897  0.543726  0.688727
-2        Random Forest  0.804163   0.705556  0.451957  0.550976  0.833527
-3    Gradient Boosting  0.804163   0.683168  0.491103  0.571429  0.854803
-4              XGBoost  0.768212   0.578261  0.473310  0.520548  0.835712
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|--------|:--------:|:---------:|:------:|:--------:|:-------:|
+| **Gradient Boosting** | **0.8042** | **0.6832** | 0.4911 | 0.5714 | **0.8548** |
+| Logistic Regression | 0.8013 | 0.6564 | **0.5302** | **0.5866** | 0.8420 |
+| XGBoost | 0.7682 | 0.5783 | 0.4733 | 0.5205 | 0.8357 |
+| Random Forest | **0.8042** | **0.7056** | 0.4520 | 0.5510 | 0.8335 |
+| Decision Tree | 0.7729 | 0.5837 | 0.5089 | 0.5437 | 0.6887 |
+
+> **Selected Model:** **Gradient Boosting**
+>
+> Gradient Boosting was chosen for deployment because it achieved the **highest ROC-AUC (0.8548)** while maintaining strong overall accuracy and balanced classification performance.
 
 ## Architecture
-                Streamlit
 
-                    │
-
-                    ▼
-
-              FastAPI API
-
-                    │
-
-                    ▼
-
-        Preprocessing Pipeline
-
-                    │
-
-                    ▼
-
-          Trained ML Model
-
-                    │
-
-                    ▼
-
-          Predicted House Price
-
-![Architecture Diagtram](images/User%20Streamlit%20FastAPI-2026-07-30-053445.png)
+![Architecture Diagram](images/User%20Streamlit%20FastAPI-2026-07-30-053445.png)
 
 ## Screenshots
 
-![App Screenshot](reports/Customer%20churn%20Prediction.gif)
+![App Screenshot](reports/app_demo.gif)
 
 
 ## Installation
