@@ -63,8 +63,7 @@ Binary Classification
 
 ## Screenshots
 
-![App Screenshot](reports/app_demo.gif)
-
+![alt text](reports/app_demo.gif)
 
 ## Installation
 
